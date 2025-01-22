@@ -1,73 +1,56 @@
-# Event Manager Hackathon Challenge 🚀
+# Event Hub 🌟  
+A comprehensive, interactive Event Management System designed to streamline event creation, management, and organization. This project features a clean, responsive interface built with HTML, CSS, and JavaScript, paired with a robust Node.js and MySQL backend for efficient data handling.
 
-## Overview
-Build a modern, interactive Event Management System using pure HTML, CSS, and JavaScript for the frontend, with Node.js and MySQL for the backend. This challenge tests your full-stack development skills, focusing on creating a responsive, user-friendly interface while implementing proper database management.
+---
 
-## Required Features 📋
+## Features 🎉  
 
-### Basic Requirements (Must Have) ✅
-1. **User Interface**
-   - Clean, modern, and responsive design
-   - Intuitive navigation
-   - Animated transitions and interactions
-   - Mobile-friendly layout
+### Core Functionality  
+- **User-Friendly Interface**: Modern and responsive design with smooth navigation.  
+- **Event Management**:  
+  - Add new events with title, description, and date.  
+  - View all events in a structured grid or list format.  
+  - Access detailed event information.  
+  - Update existing event details.  
+  - Delete events with confirmation prompts.  
+- **User Authentication**:  
+  - Secure login and registration system for personalized event management.  
+  - Password recovery through a **Forgot Password** feature.  
+  - Encrypted user data for enhanced security.  
+- **Form Validation**: Ensure proper input with client-side and server-side checks, including date restrictions for future events.  
 
-2. **Event Management**
-   - Create new events with title, description, and date
-   - View list of all events in an organized grid/list
-   - View detailed information about each event
-   - Update existing events
-   - Delete events with confirmation
+### Bonus Enhancements  
+- **Improved User Experience**:  
+  - Dark and light mode toggle.  
+  - Loading and error states with clear feedback.  
+- **Advanced Event Tools**:  
+  - Categorization and tagging for events.  
+  - Search, filter, and sort functionality.  
+  - Event image uploads for visual appeal.  
+- **Sharing Options**: Allow users to share event details across platforms.  
 
-3. **Data Validation**
-   - Form validation for all inputs
-   - Proper error handling and user feedback
-   - Date validation (no past dates for new events)
+### Deployment  
+The application is deployed online, offering easy access and a seamless demo experience.  
 
-4. **Database**
-   - MySQL database implementation
-   - Proper table structure
-   - Efficient queries and data management
+---
 
-### Bonus Features (Extra Points) 🌟
-1. **Enhanced UI/UX**
-   - Custom animations
-   - Dark/Light mode toggle
-   - Loading states
-   - Error states with proper user feedback
+## Technical Stack 💻  
 
-2. **Additional Functionality**
-   - Event categories/tags
-   - Search/Filter events
-   - Sort events by date/title
-   - Event image upload
-   - User authentication
-   - Share events functionality
+### Frontend  
+- HTML5 for structure.  
+- CSS3 for styling and animations.  
+- Vanilla JavaScript for interactivity.  
 
-3. **Deployment**
-   - Deploy the application online (Heroku, DigitalOcean, etc.)
-   - Provide a live demo URL
-   - Document deployment process
+### Backend  
+- Node.js with Express.js for server-side logic.  
+- MySQL for database management.  
+- RESTful API design for clear communication between frontend and backend.  
 
-## Technical Requirements 💻
+---
 
-### Frontend
-- HTML5
-- CSS3 (with animations and transitions)
-- Vanilla JavaScript (no frameworks allowed)
-- Responsive design (mobile-first approach)
-- FontAwesome for icons
-- Modern UI components (modals, cards, etc.)
-
-### Backend
-- Node.js
-- Express.js
-- MySQL
-- RESTful API architecture
-
-## Project Structure 📁
+## Project Structure 📁  
 ```
-event-manager/
+event-hub/
 ├── public/
 │   ├── css/
 │   │   └── style.css
@@ -76,119 +59,93 @@ event-manager/
 ├── views/
 │   ├── index.html
 │   ├── add-event.html
-│   └── view-event.html
+│   ├── view-event.html
+│   ├── register.html
+│   ├── login.html
+│   └── forgot.html
 ├── server.js
 ├── db.sql
+├── .env
 ├── package.json
 └── README.md
 ```
 
-## Getting Started 🚀
+---
 
-### Prerequisites
-- Node.js (v14 or higher)
-- MySQL (v8.0 or higher)
-- Git
+## Screenshots 📸  
 
-### Installation Steps
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/okwareddevnest/Event-Manager-S-Hook-Hackathon.git
-   cd Event-Manager-S-Hook-Hackathon
-   ```
+### Home Page  
+![Home Page](screenshots/home.png)  
+A modern and intuitive landing page that welcomes users and provides easy navigation.  
 
-2. Install dependencies:
-   ```bash
+### Event Management  
+![Event Management](screenshots/event.png)  
+Effortlessly browse, add, edit, and delete events with a structured layout.  
+
+### User Authentication  
+#### Register Page  
+![Register Page](screenshots/register.png)  
+Secure user registration with real-time validation.  
+
+#### Login Page  
+![Login Page](screenshots/login.png)  
+Simple and secure login for personalized event management.  
+
+### Dark theme  
+![Event Details](screenshots/dark.png)
+Elegant dark mode to reduce eye strain and enhance focus.
+
+---
+
+## Installation and Setup 🛠️  
+
+### Prerequisites  
+Ensure the following are installed on your system:  
+- Node.js (v14 or higher).  
+- MySQL (v8.0 or higher).  
+- Git for version control.  
+
+### Steps  
+1. **Clone the repository**:  
+   git clone <repository-url>
+
+2. **Install dependencies**:  
    npm install
-   ```
 
-3. Set up the database:
-   ```bash
+3. **Set up the database**:  
    mysql -u root -p < db.sql
-   ```
 
-4. Configure environment variables:
-   ```env
+4. **Configure environment variables**:  
+   Create a `.env` file in the root directory with the following:  
    DB_HOST=localhost
    DB_USER=your_username
    DB_PASSWORD=your_password
    DB_NAME=event_manager_db
-   ```
-   Create a `.env` file in the root directory and add the above configuration.
 
-5. Start the server:
-   ```bash
+5. **Start the server**:  
    node server.js
-   ```
+   Access the app at localhost:3000
 
-6. Access the application at `http://localhost:3000`
+   or 
 
-## API Endpoints 🛣️
-- `GET /api/events` - Get all events
-- `GET /api/events/:id` - Get specific event
-- `POST /add-event` - Create new event
-- `DELETE /api/events/:id` - Delete event
+   Online: https://web-production-2ef4.up.railway.app/
+---
 
-## Deployment Guidelines 🌐
-
-### Recommended Platforms
-1. **Heroku**
-   - Easy deployment process
-   - Free tier available
-   - Supports Node.js applications
-
-2. **DigitalOcean**
-   - More control over infrastructure
-   - Affordable pricing
-   - Better performance
-
-3. **Railway**
-   - Simple deployment
-   - Good free tier
-   - Excellent for Node.js apps
-
-### Deployment Steps
-1. Create an account on your chosen platform
-2. Set up environment variables
-3. Configure database connection
-4. Deploy application
-5. Test thoroughly in production environment
-
-## Evaluation Criteria 📊
-Your project will be evaluated based on:
-1. Code quality and organization (25%)
-2. UI/UX design and responsiveness (25%)
-3. Functionality and features (25%)
-4. Innovation and creativity (15%)
-5. Deployment and documentation (10%)
-
-## Tips for Success 💡
-1. Focus on core functionality first
-2. Write clean, well-documented code
-3. Pay attention to user experience
-4. Test thoroughly across different devices
-5. Add creative features to stand out
-6. Document your code and setup process
-7. Create an impressive README
-8. Deploy early to avoid last-minute issues
-
-## Resources 📚
-- [Node.js Documentation](https://nodejs.org/docs)
-- [MySQL Documentation](https://dev.mysql.com/doc/)
-- [Express.js Guide](https://expressjs.com/guide/routing.html)
-- [CSS Animation Guide](https://developer.mozilla.org/en-US/docs/Web/CSS/animation)
-- [FontAwesome Icons](https://fontawesome.com/icons)
-- [Deployment Guides](https://devcenter.heroku.com/categories/deployment)
-
-## Submission Requirements 📝
-1. GitHub repository link
-2. Live demo URL (if deployed)
-3. Brief project description
-4. Setup instructions
-5. List of implemented features
-6. Any additional notes or known issues
-
-Good luck! 🎉 Remember, clean code and attention to detail will set your project apart.
+## API Endpoints 🌐  
+- **GET** `/api/events`: Retrieve all events.  
+- **GET** `/api/events/:id`: Fetch details of a specific event.  
+- **POST** `/add-event`: Add a new event.  
+- **DELETE** `/api/events/:id`: Remove an event by ID.  
+- **POST** `/register`: Register a new user.  
+- **POST** `/login`: Authenticate an existing user.  
+- **POST** `/forgot`: Handle password recovery.  
 
 ---
-© 2025 Event Manager Hackathon. All rights reserved. 
+
+## Contribution 🤝  
+Contributions are welcome! If you'd like to enhance this project, feel free to fork the repository, make your changes, and open a pull request.  
+
+---
+
+## License 📜  
+This project is licensed under the MIT License.
